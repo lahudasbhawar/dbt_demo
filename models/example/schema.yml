@@ -1,21 +1,42 @@
-
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: medicare_agg
+    description: "A medicate agg data"
+    columns:
+      - name: provider_name
+        description: "provider_name"
+      - name: provider_city
+        description: "provider_city"
+      - name: provider_state
+        description: "provider_state"
+      - name: total_discahrge_sum
+        description: "total_discahrge_sum"
+      - name: average_covered_charges_sum
+        description: "average_covered_charges_sum"
+  - name: medicare_state_agg
+    description: "A medicate agg data"
+    columns:
+      - name: provider_state
+        description: "provider_state"
+      - name: total_discahrge_sum
+        description: "total_discahrge_sum"
+      - name: average_covered_charges_sum
+        description: "average_covered_charges_sum"
